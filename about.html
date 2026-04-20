@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — GlowBeauty</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=skincare">Skincare</a></li>
+        <li><a href="shop.html?category=makeup">Makeup</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon" onclick="toggleCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+        <button class="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About GlowBeauty</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>About</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT INTRO -->
+  <section class="container">
+    <div class="about-intro">
+      <div class="about-intro-image">🌿</div>
+      <div>
+        <h2>Our Story</h2>
+        <p>GlowBeauty was born from a simple belief: everyone deserves access to premium, clean beauty products that actually work. Founded in 2020, we set out to create a brand that combines the best of science and nature.</p>
+        <p>Every product in our collection is carefully formulated with ethically sourced ingredients, rigorously tested for efficacy, and designed to bring out your natural radiance. We believe beauty should be effortless, inclusive, and kind to the planet.</p>
+        <p>From our bestselling Rose Glow Serum to our award-winning SPF collection, each product represents our commitment to quality, transparency, and your skin health.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">Our Values</h2>
+      <p class="section-subtitle">What drives everything we do</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="icon">🌱</span>
+          <h3>Clean Beauty</h3>
+          <p>All our products are free from parabens, sulfates, phthalates, and over 1,500 harmful ingredients. We believe in transparency and list every ingredient.</p>
+        </div>
+        <div class="value-card">
+          <span class="icon">🐰</span>
+          <h3>Cruelty Free</h3>
+          <p>We never test on animals. Period. All our products are certified cruelty-free and many are also vegan-friendly.</p>
+        </div>
+        <div class="value-card">
+          <span class="icon">♻️</span>
+          <h3>Sustainable</h3>
+          <p>From recyclable packaging to carbon-neutral shipping, we're committed to minimizing our environmental footprint at every step.</p>
+        </div>
+        <div class="value-card">
+          <span class="icon">🔬</span>
+          <h3>Science-Backed</h3>
+          <p>Every formula is developed by our team of cosmetic chemists and dermatologists, ensuring clinically proven results you can see.</p>
+        </div>
+        <div class="value-card">
+          <span class="icon">🌍</span>
+          <h3>Inclusive Beauty</h3>
+          <p>Beauty has no boundaries. Our products are designed for all skin types, tones, and textures because everyone deserves to glow.</p>
+        </div>
+        <div class="value-card">
+          <span class="icon">💜</span>
+          <h3>Community First</h3>
+          <p>We donate 2% of every purchase to women's education initiatives worldwide. When you glow, you help others shine too.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM STATS -->
+  <section class="promo-banner">
+    <div class="container">
+      <h2>GlowBeauty in Numbers</h2>
+      <p>Growing together with our amazing community</p>
+      <div class="hero-stats" style="justify-content:center;margin-top:32px;">
+        <div class="hero-stat">
+          <div class="hero-stat-number" style="color:#fff">50+</div>
+          <div class="hero-stat-label" style="color:rgba(255,255,255,0.8)">Products</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number" style="color:#fff">10K+</div>
+          <div class="hero-stat-label" style="color:rgba(255,255,255,0.8)">Customers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number" style="color:#fff">25+</div>
+          <div class="hero-stat-label" style="color:rgba(255,255,255,0.8)">Countries</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number" style="color:#fff">4.8★</div>
+          <div class="hero-stat-label" style="color:rgba(255,255,255,0.8)">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Join the Glow Club</h2>
+      <p>Subscribe for exclusive offers, beauty tips, and early access to new products.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+          <p>Premium skincare and makeup crafted with love and clean ingredients.</p>
+          <div class="footer-social">
+            <a href="#">📘</a><a href="#">📷</a><a href="#">🐦</a><a href="#">📌</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@glowbeauty.com">hello@glowbeauty.com</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlowBeauty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay"></div>
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="cart-total-amount">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary">Checkout</a>
+      <button class="continue-shopping">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

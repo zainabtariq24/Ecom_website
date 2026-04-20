@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowBeauty — Premium Skincare & Makeup</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=skincare">Skincare</a></li>
+        <li><a href="shop.html?category=makeup">Makeup</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon" onclick="toggleCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+        <button class="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">✦ New Collection 2026</span>
+        <h1>Discover Your <em>Natural</em> Beauty</h1>
+        <p>Premium skincare and makeup crafted with clean ingredients to let your natural beauty shine through.</p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn btn-primary">Shop Now →</a>
+          <a href="shop.html?category=skincare" class="btn btn-outline">Skincare</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">50+</div>
+            <div class="hero-stat-label">Products</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">10K+</div>
+            <div class="hero-stat-label">Happy Customers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4.8★</div>
+            <div class="hero-stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-placeholder">🌸</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle">Find exactly what your skin needs</p>
+      <div class="categories-grid">
+        <a href="shop.html?category=skincare" class="category-card">
+          <span class="category-icon">🧴</span>
+          <h3>Skincare</h3>
+          <p>Serums, moisturizers & more</p>
+        </a>
+        <a href="shop.html?category=makeup" class="category-card">
+          <span class="category-icon">💄</span>
+          <h3>Makeup</h3>
+          <p>Foundation, lips & eyes</p>
+        </a>
+        <a href="shop.html" class="category-card">
+          <span class="category-icon">☀️</span>
+          <h3>Sun Care</h3>
+          <p>SPF protection & after-sun</p>
+        </a>
+        <a href="shop.html" class="category-card">
+          <span class="category-icon">🎁</span>
+          <h3>Gift Sets</h3>
+          <p>Curated beauty bundles</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">Trending Now</h2>
+      <p class="section-subtitle">Our most loved products this season</p>
+      <div class="products-grid" id="featuredProducts"></div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="shop.html" class="btn btn-outline">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo-banner">
+    <div class="container">
+      <h2>Summer Sale — Up to 30% Off</h2>
+      <p>Use code GLOW30 at checkout. Free shipping on orders over $50.</p>
+      <a href="shop.html" class="btn btn-gold">Shop the Sale</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🌿</span>
+          <h3>Clean Ingredients</h3>
+          <p>Cruelty-free, vegan formulas with no harmful chemicals</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🚚</span>
+          <h3>Free Shipping</h3>
+          <p>Complimentary shipping on all orders over $50</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">↩️</span>
+          <h3>Easy Returns</h3>
+          <p>30-day hassle-free return policy</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💎</span>
+          <h3>Premium Quality</h3>
+          <p>Dermatologist-tested, clinically proven results</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Real reviews from real beauty lovers</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Rose Glow Serum transformed my skin! After just two weeks, my complexion is brighter and more even. Absolutely love it."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Best foundation I've ever used. The Luminous Foundation gives such a natural, flawless finish. It lasts all day without feeling heavy."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍🦱</div>
+            <div>
+              <div class="testimonial-name">Emily R.</div>
+              <div class="testimonial-role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I'm obsessed with the SPF 50 Sunscreen Gel. No white cast, no greasiness. It's the only sunscreen I'll ever use under my makeup."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍🦰</div>
+            <div>
+              <div class="testimonial-name">Priya K.</div>
+              <div class="testimonial-role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Join the Glow Club</h2>
+      <p>Subscribe for exclusive offers, beauty tips, and early access to new products.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+          <p>Premium skincare and makeup crafted with love and clean ingredients. Discover your natural beauty with GlowBeauty.</p>
+          <div class="footer-social">
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+            <a href="#">🐦</a>
+            <a href="#">📌</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?category=skincare">Skincare</a></li>
+            <li><a href="shop.html?category=makeup">Makeup</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@glowbeauty.com">hello@glowbeauty.com</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="#">123 Beauty Lane,<br>New York, NY 10001</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlowBeauty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay"></div>
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="cart-total-amount">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary">Checkout</a>
+      <button class="continue-shopping">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

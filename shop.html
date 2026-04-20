@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — GlowBeauty</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="shop.html?category=skincare">Skincare</a></li>
+        <li><a href="shop.html?category=makeup">Makeup</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon" onclick="toggleCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+        <button class="hamburger" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Shop All Products</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Shop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP LAYOUT -->
+  <section class="container">
+    <div class="shop-layout">
+      <aside class="shop-sidebar">
+        <div class="filter-group">
+          <h3>Category</h3>
+          <label><input type="checkbox" class="filter-cat" value="skincare"> Skincare</label>
+          <label><input type="checkbox" class="filter-cat" value="makeup"> Makeup</label>
+        </div>
+        <div class="filter-group">
+          <h3>Product Type</h3>
+          <label><input type="checkbox" class="filter-subcat" value="Serums"> Serums</label>
+          <label><input type="checkbox" class="filter-subcat" value="Moisturizers"> Moisturizers</label>
+          <label><input type="checkbox" class="filter-subcat" value="Cleansers"> Cleansers</label>
+          <label><input type="checkbox" class="filter-subcat" value="Masks"> Masks</label>
+          <label><input type="checkbox" class="filter-subcat" value="Sun Care"> Sun Care</label>
+          <label><input type="checkbox" class="filter-subcat" value="Face"> Face</label>
+          <label><input type="checkbox" class="filter-subcat" value="Eyes"> Eyes</label>
+          <label><input type="checkbox" class="filter-subcat" value="Lips"> Lips</label>
+        </div>
+        <div class="filter-group">
+          <h3>Price Range</h3>
+          <div class="price-range">
+            <input type="number" id="minPrice" placeholder="Min" min="0">
+            <span>—</span>
+            <input type="number" id="maxPrice" placeholder="Max" min="0">
+          </div>
+        </div>
+      </aside>
+
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <p id="resultCount">Showing 16 of 16 products</p>
+          <select id="sortSelect">
+            <option value="featured">Sort by: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+        <div class="products-grid" id="shopGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" style="margin-top:48px;">
+    <div class="container">
+      <h2>Join the Glow Club</h2>
+      <p>Subscribe for exclusive offers, beauty tips, and early access to new products.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Glow<span>Beauty</span></a>
+          <p>Premium skincare and makeup crafted with love and clean ingredients.</p>
+          <div class="footer-social">
+            <a href="#">📘</a><a href="#">📷</a><a href="#">🐦</a><a href="#">📌</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?category=skincare">Skincare</a></li>
+            <li><a href="shop.html?category=makeup">Makeup</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@glowbeauty.com">hello@glowbeauty.com</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlowBeauty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay"></div>
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close">&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="cart-total-amount">$0.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary">Checkout</a>
+      <button class="continue-shopping">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
